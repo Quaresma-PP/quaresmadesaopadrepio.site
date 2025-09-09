@@ -17,6 +17,13 @@
   <style>
     body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
   </style>
+  <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
 </head>
 <body class="antialiased bg-gray-50 text-gray-800">
   <!-- Pixel (noscript) preservado do original -->
@@ -155,7 +162,17 @@
 
 </div>
 
-
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
 
         </form>
       </div>
@@ -163,3 +180,4 @@
   </div>
 </body>
 </html>
+
