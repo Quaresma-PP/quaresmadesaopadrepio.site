@@ -27,6 +27,14 @@
 <link rel="dns-prefetch" href="https://images.converteai.net">
 <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
+  <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+  
 </head>
 <body class="antialiased bg-white text-gray-800">
   <div class="min-h-screen">
@@ -271,8 +279,19 @@
       </div>
     </main>
   </div>
-
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
   <!-- Scripts opcionais do player (incluir se necessário) -->
   <!-- <script src="https://cdn.vturb.com/player.js"></script> -->
 </body>
 </html>
+
