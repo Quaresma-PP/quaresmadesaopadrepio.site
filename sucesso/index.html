@@ -21,6 +21,15 @@
       if (nome) document.getElementById("mostrarNome").textContent = nome;
     };
   </script>
+  
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
 </head>
 <body class="antialiased bg-[#f3f6f9] text-gray-800"
       style="background:url('images/banner-fundo.jpg') center/cover no-repeat fixed;">
@@ -190,5 +199,19 @@
       if (img) document.getElementById('angelImg').src = img;
     })();
   </script>
+
+  <script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+  
 </body>
 </html>
+
